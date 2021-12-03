@@ -7,7 +7,7 @@ import HeaderOptions from './HeaderOptions/HeaderOptions';
 
 function Header() {
   const router = useRouter();
-  const searchInputRef = useRef<HTMLInputElement | null>(null);
+  const searchInputRef = useRef<HTMLInputElement | any>(null);
 
   const search = (e: any) => {
     e.preventDefault();
@@ -34,7 +34,7 @@ function Header() {
           />
           <XIcon
             className="h-7 text-gray-500 cursor-pointer transition duration-100 transform hover:scale-125"
-            onClick={() => (searchInputRef?.current?.value = null)}
+            onClick={() => (searchInputRef.current.value = null)}
           />
           <MicrophoneIcon className="mr-3 h-6 hidden sm:inline-flex text-blue-500 border-l-2 pl-4 border-gray-300" />
           <SearchIcon className="h-6 text-blue-500 hidden sm:inline-flex" />
