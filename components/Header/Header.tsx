@@ -12,9 +12,7 @@ function Header() {
   const search = (e: any) => {
     e.preventDefault();
     const term = searchInputRef?.current?.value;
-
     if (!term) return;
-
     router.push(`/search?term=${term}`);
   };
 
@@ -50,7 +48,7 @@ function Header() {
           link="https://avatars.githubusercontent.com/u/44520484?v=4"
         />
       </div>
-      <HeaderOptions/>
+      <HeaderOptions />
     </header>
   );
 }
