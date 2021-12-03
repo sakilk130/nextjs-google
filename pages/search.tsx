@@ -25,7 +25,7 @@ export async function getServerSideProps(context: any) {
   const CONTEXT_KEY = process.env.NEXT_PUBLIC_SEARCH_ENGINE_ID;
   const startIndex = context.query.start || '0';
 
-  const useDummyData = true;
+  const useDummyData = false;
   const data = useDummyData
     ? Response
     : await fetch(
